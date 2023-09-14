@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 export default function Home() {
   return (
     <div className='Home'>
+      <h1>Test</h1>
     <Header />
     <Welcome />
     <Slider />

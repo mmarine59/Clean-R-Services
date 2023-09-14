@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'nova_roundbook';
+    src: url('./assets/fonts/novaround-regular-webfont.woff2') format('woff2'),
+         url('./assets/fonts/novaround-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'nova_roundbook';
+}
+
+.contactForm {
+display: flex;
+flex-direction: column;
+text-align: center;
+
+.lastname, .firstname, .email, .object, .message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+}
