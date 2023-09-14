@@ -17,6 +17,12 @@ body {
   }
 }
 
+.welcome {
+    background-image: url(../src/assets/bg-welcome.jpg);
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
 .contactForm {
   display: flex;
   flex-direction: column;
@@ -33,12 +39,18 @@ body {
 
   input {
     height: 20px;
+    background-color: rgba(0, 155, 176, 0.1);
+  }
+
+  select {
+    background-color: rgba(0, 155, 176, 0.1);
   }
 
   textarea {
     width: 100%;
     height: 100px;
     resize: none;
+    background-color: rgba(0, 155, 176, 0.1);
   }
 
   button {
@@ -52,7 +64,7 @@ body {
 
 .footer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenlyh;
     margin-top: 30px;
 
     img {
@@ -60,6 +72,7 @@ body {
     }
     p {
         font-size: xx-small;
-        padding-top: 10px;
+        padding: 10px 50px;
+        color:rgba(0, 122, 191, 1) ;
     }
 }
