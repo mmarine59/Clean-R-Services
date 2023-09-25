@@ -4,7 +4,7 @@ export default function ContactForm() {
     return (
         <div className='contactForm'>
             <h2>Nous contacter</h2>
-            <form action="" className='form'>
+            <form action="http://localhost:3000/envoyer-email" className='form'>
                 <div className="lastname">
                 <label htmlFor="lastname">Nom :</label>
                 <input type="text" name='lastname' id='lastname' required/>
