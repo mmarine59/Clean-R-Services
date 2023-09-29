@@ -21,7 +21,7 @@ export default function ContactForm() {
             });
             if (response.ok) {
                 console.log("E-mail envoyé avec succès");
-                // Réinitialisez le formulaire après l'envoi réussi si nécessaire
+                // Réinitialisation formulaire après envoi réussi si nécessaire
                 setFormData({
                     lastname: '',
                     firstname: '',
@@ -34,12 +34,11 @@ export default function ContactForm() {
             }
         } catch (error) {
             console.error("Erreur inattendue:", error);
-            console.error(error.stack); // Affichez la pile d'appels de l'erreur
         }
     };
 
     const handleChange = (e) => {
-        // Mettez à jour les données du formulaire en fonction des changements de l'utilisateur
+        // MAJ données du formulaire en fonction des changements de l'utilisateur
         const { name, value } = e.target;
         setFormData({
             ...formData,

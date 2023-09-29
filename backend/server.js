@@ -6,13 +6,13 @@ import cors from 'cors';
 
 const app = express();
 
-// Utilisez cors avec une configuration pour autoriser les requêtes provenant de l'origine spécifiée
+// Utilisation cors avec une configuration pour autoriser les requêtes provenant de l'origine spécifiée
 app.use(cors({
-  origin: 'http://localhost:5173', // Remplacez par l'URL de votre site web
+  origin: 'http://localhost:5173',
   methods: 'POST', // Autorisez uniquement les requêtes POST
 }));
 
-// Middleware pour parser les données du formulaire
+// Middleware pour analyser les données du formulaire
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -32,7 +32,7 @@ app.post("/envoyer-email", (req, res) => {
   // Options de l'e-mail
   const mailOptions = {
     from: email, // Utilisez l'e-mail de l'expéditeur spécifié dans le formulaire
-    to: "adresse-destinataire@email.com", // Adresse e-mail du destinataire
+    to: EMAIL_USER, // Adresse e-mail du destinataire
     subject: "Nouveau message de formulaire de contact",
     text: `
             Nom : ${lastname}
