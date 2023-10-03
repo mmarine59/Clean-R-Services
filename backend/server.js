@@ -26,7 +26,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Gérer la requête POST lorsque le formulaire est soumis
-app.post("/envoyer-email", (req, res) => {
+app.post("/contact", (req, res) => {
   const { lastname, firstname, email, object, message } = req.body;
 
   // Options de l'e-mail
