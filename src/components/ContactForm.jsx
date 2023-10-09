@@ -21,7 +21,7 @@ export default function ContactForm() {
             });
             if (response.ok) {
                 console.log("E-mail envoyé avec succès");
-                // Réinitialisation formulaire après envoi réussi si nécessaire
+                // Réinitialisation formulaire après envoi réussi
                 setFormData({
                     lastname: '',
                     firstname: '',
@@ -58,7 +58,7 @@ export default function ContactForm() {
                         id='lastname'
                         required
                         value={formData.lastname}
-                        onChange={handleChange} // Gestionnaire onChange
+                        onChange={handleChange} 
                     />
                 </div>
                 <div className="firstname">
@@ -69,7 +69,7 @@ export default function ContactForm() {
                         id='firstname'
                         required
                         value={formData.firstname}
-                        onChange={handleChange} // Gestionnaire onChange
+                        onChange={handleChange} 
                     />
                 </div>
                 <div className="email">
@@ -80,7 +80,7 @@ export default function ContactForm() {
                         id='email'
                         required
                         value={formData.email}
-                        onChange={handleChange} // Gestionnaire onChange
+                        onChange={handleChange} 
                     />
                 </div>
                 <div className="object">
@@ -90,7 +90,7 @@ export default function ContactForm() {
                         id="object"
                         required
                         value={formData.object}
-                        onChange={handleChange} // Gestionnaire onChange
+                        onChange={handleChange} 
                     >
                         <option value="ask-estimate">Demande de devis</option>
                         <option value="ask-infos">Demande de renseignement</option>
@@ -103,7 +103,7 @@ export default function ContactForm() {
                         id='message'
                         required
                         value={formData.message}
-                        onChange={handleChange} // Gestionnaire onChange
+                        onChange={handleChange} 
                     />
                 </div>
                 <button type="submit">Envoyer</button>
@@ -111,42 +111,5 @@ export default function ContactForm() {
         </div>
     )
 }
-
-
-
-// export default function ContactForm() {
-//     return (
-//         <div className='contactForm'>
-//             <h2>Nous contacter</h2>
-//             <form action="http://localhost:3000/envoyer-email" className='form' method="POST">
-//                 <div className="lastname">
-//                 <label htmlFor="lastname">Nom :</label>
-//                 <input type="text" name='lastname' id='lastname' required/>
-//                 </div>
-//                 <div className="firstname">
-//                 <label htmlFor="firstname">Prénom :</label>
-//                 <input type="text" name='firstname' id='firstname' required/>
-//                 </div>
-//                 <div className="email">
-//                 <label htmlFor="email">Mail :</label>
-//                 <input type="mail" name='email' id='email' required/>
-//                 </div>
-//                 <div className="object">
-//                 <label htmlFor="object">Objet :</label>
-//                 <select name="object" id="object" required>
-//                     <option value="ask-estimate">Demande de devis</option>
-//                     <option value="ask-infos">Demande de renseignement</option>
-//                 </select>
-//                 </div>
-//                 <div className="message">
-//                 <label htmlFor="message">Votre message :</label>
-//                 <textarea name='message' id='message' required/>
-//                 </div>
-//                 <button>Envoyer</button>
-//             </form>
-//         </div>
-//     )
-// }
-
 
 

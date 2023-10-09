@@ -1,15 +1,15 @@
-import express from 'express';
-import nodemailer from 'nodemailer';
-import bodyParser from 'body-parser';
-import dotenv from 'dotenv';
-import cors from 'cors';
+const express = require("express");
+const nodemailer = require("nodemailer");
+const bodyParser = require("body-parser");
+const cors = require("cors");
 
+require('dotenv').config();
 const app = express();
 
 // Utilisation cors avec une configuration pour autoriser les requêtes provenant de l'origine spécifiée
 app.use(cors({
   origin: 'http://localhost:5173',
-  methods: 'POST', // Autorisez uniquement les requêtes POST
+  methods: 'POST', // Autoriser uniquement les requêtes POST
 }));
 
 // Middleware pour analyser les données du formulaire
@@ -32,8 +32,8 @@ app.post("/contact", (req, res) => {
   // Options de l'e-mail
   const mailOptions = {
     from: email, // Utilisez l'e-mail de l'expéditeur spécifié dans le formulaire
-    to: EMAIL_USER, // Adresse e-mail du destinataire
-    subject: "Nouveau message de formulaire de contact",
+    to: process.env.EMAIL_USER, // Adresse e-mail du destinataire
+    subject: "Clean'R services Formulaire de contact",
     text: `
             Nom : ${lastname}
             Prénom : ${firstname}
